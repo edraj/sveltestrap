@@ -11,13 +11,15 @@
 <h2 class="accordion-header" {...$$restProps}>
   <div class={classes} data-bs-toggle="collapse" data-bs-target="#item_1" on:click>
     <h5 class="content_title fw-bold"><slot /></h5>
-    {#if extra}
+
       <div class="ms-auto">
+        {#if extra}
         <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true" on:click={extra.action}>
           {extra.icon}
         </span>
+        {/if}
       </div>
-    {/if}
+
   </div>
 <!--  <button type="button" class={classes} on:click>-->
 <!--    <p>-->
