@@ -16,7 +16,7 @@
     <div class="ms-auto">
       {#if extra}
         <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true" on:click={extra.action}>
-          <Icon name={extra.icon}/>
+          <h3><Icon name={extra.icon}/></h3>
         </span>
       {/if}
     </div>
