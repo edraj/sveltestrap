@@ -32,6 +32,7 @@
     on:click={() => onToggle()}
     class={!accordionOpen && 'collapsed'}
   >
+    <h1> THIS is my header </h1>
     <slot name="header" />
     {header}
   </AccordionHeader>
