@@ -36,7 +36,6 @@
     <slot name="header" />
     {header}
   </AccordionHeader>
-  <Button>Action</Button>
   <Collapse
     isOpen={accordionOpen}
     class="accordion-collapse"
