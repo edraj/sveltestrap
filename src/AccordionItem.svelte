@@ -3,7 +3,6 @@
   import classnames from './utils';
   import Collapse from './Collapse.svelte';
   import AccordionHeader from './AccordionHeader.svelte';
-  import Button from "./Button.svelte";
 
   let className = '';
   export { className as class };
