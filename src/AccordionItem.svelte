@@ -7,6 +7,7 @@
   let className = '';
   export { className as class };
   export let header = '';
+  export let extra = null;
   export let active = false;
   let accordionId;
 
@@ -30,6 +31,7 @@
 <div class={classes} bind:this={accordionId}>
   <AccordionHeader
     on:click={() => onToggle()}
+    {extra}
     class={!accordionOpen && 'collapsed'}
   >
     {header}
