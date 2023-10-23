@@ -1,5 +1,6 @@
 <script>
   import classnames from './utils';
+  import Icon from "./Icon.svelte";
 
   let className = '';
   export { className as class };
@@ -15,7 +16,7 @@
       <div class="ms-auto">
         {#if extra}
         <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true" on:click={extra.action}>
-          {extra.icon}
+          <Icon name={extra.icon}/>
         </span>
         {/if}
       </div>
