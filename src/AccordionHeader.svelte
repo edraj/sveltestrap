@@ -8,8 +8,16 @@
 </script>
 
 <h2 class="accordion-header" {...$$restProps}>
-  <button type="button" class={classes} on:click>
-    <slot />
-    <Button>Action</Button>
-  </button>
+  <div class="accordion-button collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#item_1" aria-expanded="false" aria-controls="#item_1">
+    <h5 class="content_title fw-bold"><slot /></h5>
+    <div class="ms-auto">
+      <span class="fa fa-pencil-alt cercle-icons edit-icon" data-app-id="1" data-content-id="1" aria-hidden="true"></span>
+      <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true"></span>
+    </div>
+  </div>
+<!--  <button type="button" class={classes} on:click>-->
+<!--    <p>-->
+<!--      <Button>Action</Button>-->
+<!--    </p>-->
+<!--  </button>-->
 </h2>
