@@ -21,3 +21,9 @@
 <!--    </p>-->
 <!--  </button>-->
 </h2>
+
+<style>
+    .accordion-button::after {
+        margin-left: 1.1rem;
+    }
+</style>
