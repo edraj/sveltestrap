@@ -10,6 +10,10 @@
   import slotsSource from '!!raw-loader!./Slots.svelte';
   import StayOpen from './StayOpen.svelte';
   import stayOpenSource from '!!raw-loader!./StayOpen.svelte';
+  import SuffixExtra from "./SuffixExtra.svelte";
+  import suffixExtraSource from "!!raw-loader!./SuffixExtra.svelte";
+  import PrefixExtra from "./PrefixExtra.svelte";
+  import prefixExtraSource from "!!raw-loader!./PrefixExtra.svelte";
 </script>
 
 <h1>Accordion</h1>
@@ -42,4 +46,12 @@
 
 <Example title="Events" source={eventsSource}>
   <Events />
+</Example>
+
+<Example title="Suffix" source={suffixExtraSource}>
+  <SuffixExtra />
+</Example>
+
+<Example title="Prefix" source={prefixExtraSource}>
+  <PrefixExtra />
 </Example>

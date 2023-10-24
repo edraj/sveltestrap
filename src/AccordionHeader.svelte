@@ -1,33 +1,41 @@
 <script>
   import classnames from './utils';
   import Icon from "./Icon.svelte";
+  import Input from "./Input.svelte";
 
   let className = '';
   export { className as class };
-  export let extra = null;
+  export let extraPrefix = null;
+  export let extraSuffix = null;
 
   $: classes = classnames(className, 'accordion-button collapsed d-flex');
+
 </script>
 
-<h2 class="accordion-header" {...$$restProps}>
-  <div class={classes} data-bs-toggle="collapse" data-bs-target="#item_1" on:click>
-    <h5 class="content_title fw-bold"><slot /></h5>
+<div class="accordion-header" {...$$restProps}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div class={classes} data-bs-target="#item_1" data-bs-toggle="collapse" on:click>
+    {#if extraPrefix}
+        <span><Input type="checkbox" bind:checked={extraPrefix.value} on:change={extraPrefix.action} /></span>
+    {/if}
+
+    <h5 class="content_title fw-bold m-0"><slot /></h5>
 
     <div class="ms-auto">
-      {#if extra}
-        <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1" aria-hidden="true" on:click={extra.action}>
-          <h4><Icon name={extra.icon}/></h4>
+      {#if extraSuffix}
+        <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1"  on:click={extraSuffix.action}>
+         <Icon name={extraSuffix.icon}/>
         </span>
       {/if}
     </div>
-
   </div>
   <!--  <button type="button" class={classes} on:click>-->
   <!--    <p>-->
   <!--      <Button>Action</Button>-->
   <!--    </p>-->
   <!--  </button>-->
-</h2>
+</div>
 
 <style>
     .accordion-button::after {
