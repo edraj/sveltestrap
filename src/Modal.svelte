@@ -226,7 +226,8 @@
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class={wrapClassName} tabindex="-1" {...$$restProps}>
       {#if isOpen}
-        <!-- svelte-ignore a11y/non-interactive-element-binding -->
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
         <div
           in:modalIn|global
           out:modalOut|global

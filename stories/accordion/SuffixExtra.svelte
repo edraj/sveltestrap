@@ -4,7 +4,6 @@
   const extraSuffix = {
     action: (event: any)=>{
       event.stopPropagation();
-      console.log('SUFFIXED !');
     },
     icon: "plus-square-fill"
   }
