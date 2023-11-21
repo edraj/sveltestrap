@@ -14,6 +14,8 @@
   import suffixExtraSource from "!!raw-loader!./SuffixExtra.svelte";
   import PrefixExtra from "./PrefixExtra.svelte";
   import prefixExtraSource from "!!raw-loader!./PrefixExtra.svelte";
+  import Nested from "./Nested.svelte";
+  import nestedSource from "!!raw-loader!./Nested.svelte";
 </script>
 
 <h1>Accordion</h1>
@@ -54,4 +56,8 @@
 
 <Example title="Prefix" source={prefixExtraSource}>
   <PrefixExtra />
+</Example>
+
+<Example title="Nested" source={nestedSource}>
+  <Nested />
 </Example>

@@ -9,6 +9,11 @@
   export let extraSuffix = null;
 
   $: classes = classnames(className, 'accordion-button collapsed d-flex');
+  function handleChange(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    extraPrefix.action();
+  }
 
 </script>
 
@@ -17,7 +22,7 @@
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class={classes} data-bs-target="#item_1" data-bs-toggle="collapse" on:click>
     {#if extraPrefix}
-        <span><Input type="checkbox" bind:checked={extraPrefix.value} on:change={extraPrefix.action} /></span>
+        <span><Input type="checkbox" bind:checked={extraPrefix.value} on:change={handleChange} /></span>
     {/if}
 
     <h5 class="content_title fw-bold m-0"><slot /></h5>

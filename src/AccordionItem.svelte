@@ -22,7 +22,8 @@
     if (active) toggle(accordionId);
   });
 
-  const onToggle = () => {
+  const onToggle = (e) => {
+    e.stopPropagation();
     if (stayOpen) active = !active;
     toggle(accordionId);
     dispatch('toggle', !accordionOpen);
@@ -31,7 +32,7 @@
 
 <div class={classes} bind:this={accordionId}>
   <AccordionHeader
-    on:click={() => onToggle()}
+    on:click={onToggle}
     {extraPrefix}
     {extraSuffix}
     class={!accordionOpen && 'collapsed'}
