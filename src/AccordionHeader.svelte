@@ -1,49 +1,47 @@
 <script>
-  import classnames from './utils';
   import Icon from "./Icon.svelte";
-  import Input from "./Input.svelte";
 
-  let className = '';
-  export { className as class };
   export let extraPrefix = null;
   export let extraSuffix = null;
 
-  $: classes = classnames(className, 'accordion-button collapsed d-flex');
   function handleChange(e) {
     e.preventDefault();
     e.stopPropagation();
     extraPrefix.action();
   }
-
 </script>
 
 <div class="accordion-header" {...$$restProps}>
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div class={classes} data-bs-target="#item_1" data-bs-toggle="collapse" on:click>
+  <div class="mx-2 row">
     {#if extraPrefix}
-        <span><Input type="checkbox" bind:checked={extraPrefix.value} on:change={handleChange} /></span>
+        <input style="width: 1rem" type="checkbox" bind:checked={extraPrefix.value} on:change={handleChange} />
+        <h5 class="content_title fw-bold m-0 text-center" style="width: fit-content;"><slot /></h5>
+    {:else}
+      <h5 class="content_title fw-bold m-0 text-center" style="width: fit-content;"><slot /></h5>
     {/if}
 
-    <h5 class="content_title fw-bold m-0"><slot /></h5>
-
-    <div class="ms-auto">
-      {#if extraSuffix}
-        <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1"  on:click={extraSuffix.action}>
-         <Icon name={extraSuffix.icon}/>
-        </span>
-      {/if}
+    <div class="col d-flex justify-content-end align-items-center p-0 m-0">
+        {#if extraSuffix}
+          <!-- svelte-ignore a11y-click-events-have-key-events -->
+          <!-- svelte-ignore a11y-no-static-element-interactions -->
+          <span class="far fa-trash-alt cercle-icons delete-icon" data-app-id="1" data-content-id="1"  on:click={extraSuffix.action}>
+           <Icon name={extraSuffix.icon}/>
+          </span>
+        {/if}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
+      <div style="width: fit-content !important;" class="collapsed accordion-button collapsed" data-bs-target="#item_1" data-bs-toggle="collapse" on:click></div>
     </div>
+
   </div>
-  <!--  <button type="button" class={classes} on:click>-->
-  <!--    <p>-->
-  <!--      <Button>Action</Button>-->
-  <!--    </p>-->
-  <!--  </button>-->
 </div>
 
 <style>
     .accordion-button::after {
         margin-left: 1.1rem;
+    }
+    .content_title {
+        display: flex;
+        align-items: center;
     }
 </style>

@@ -3,8 +3,7 @@
 
   let checkedOuter = true;
   const extraPrefixOuter = {
-    action: (event: any) => {
-      event.stopPropagation();
+    action: () => {
       checkedOuter = !checkedOuter;
     },
     value: checkedOuter
@@ -12,21 +11,20 @@
 
   let checkedInner = true;
   const extraPrefixInner = {
-    action: (event: any) => {
-      event.stopPropagation();
+    action: () => {
       checkedInner = !checkedInner;
     },
     value: checkedInner
   }
 </script>
 
-<Accordion on:toggle={console.log}>
+<Accordion>
   <AccordionItem
     active
     header="Prefix"
     extraPrefix={extraPrefixOuter}
   >
-    <Accordion on:toggle={console.log}>
+    <Accordion>
       <AccordionItem
         active
         header="Prefix"

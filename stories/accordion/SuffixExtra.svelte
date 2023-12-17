@@ -9,7 +9,7 @@
   }
 </script>
 
-<Accordion on:toggle={console.log}>
+<Accordion>
   <AccordionItem
     {extraSuffix}
     active

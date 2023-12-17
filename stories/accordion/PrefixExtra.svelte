@@ -3,15 +3,14 @@
 
   let checked = true;
   const extraPrefix = {
-    action: (event: any) => {
-      event.stopPropagation();
+    action: () => {
       checked = !checked;
     },
     value: checked
   }
 </script>
 
-<Accordion on:toggle={console.log}>
+<Accordion>
   <AccordionItem
     active
     header="Prefix"

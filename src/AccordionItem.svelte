@@ -47,7 +47,7 @@
     on:outrostart
     on:outroend
   >
-    <div class="accordion-body">
+    <div class="accordion-body m-1">
       <slot />
     </div>
   </Collapse>

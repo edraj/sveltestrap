@@ -10,7 +10,7 @@
   export let stayOpen = false;
 
   let className = '';
-  $: classes = classnames(className, 'accordion', { 'accordion-flush': flush });
+  $: classes = classnames(className, 'accordion p-1', { 'accordion-flush': flush });
 
   const open = writable();
   setContext('accordion', {

@@ -5,7 +5,7 @@
   let open = true;
 </script>
 
-<Accordion on:toggle={console.log}>
+<Accordion>
   <AccordionItem
     active
     header="Home"
