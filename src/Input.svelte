@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
   import FormCheck from './FormCheck.svelte';
   import FormFeedback from './FormFeedback.svelte';
-
   import classnames from './utils';
 
   let className = '';
@@ -21,7 +20,7 @@
   export let name = '';
   export let placeholder = '';
   export let plaintext = false;
-  export let readonly = undefined;
+  export let readonly: any = undefined;
   export let reverse = false;
   export let size = undefined;
   export let type = 'text';
