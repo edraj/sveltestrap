@@ -10,13 +10,13 @@
   export let extraPrefix = null;
   export let extraSuffix = null;
   export let active = false;
+  let accordionOpen = active;
   let accordionId;
 
   const dispatch = createEventDispatcher();
 
-  const { stayOpen, toggle, open } = getContext('accordion');
+  const { stayOpen, toggle } = getContext('accordion');
   $: classes = classnames(className, 'accordion-item');
-  $: accordionOpen = stayOpen ? active : $open === accordionId;
 
   onMount(() => {
     if (active) toggle(accordionId);
@@ -25,6 +25,7 @@
   const onToggle = (e) => {
     e.stopPropagation();
     if (stayOpen) active = !active;
+    accordionOpen = !accordionOpen;
     toggle(accordionId);
     dispatch('toggle', !accordionOpen);
   };

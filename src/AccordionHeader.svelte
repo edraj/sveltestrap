@@ -15,9 +15,9 @@
   <div class="mx-2 row">
     {#if extraPrefix}
         <input style="width: 1rem" type="checkbox" bind:checked={extraPrefix.value} on:change={handleChange} />
-        <h5 class="content_title fw-bold m-0 text-center" style="width: fit-content;"><slot /></h5>
+        <h5 class="content_title fw-bold m-0 text-center px-1" style="width: fit-content;"><slot /></h5>
     {:else}
-      <h5 class="content_title fw-bold m-0 text-center" style="width: fit-content;"><slot /></h5>
+      <h5 class="content_title fw-bold m-0 text-center px-1" style="width: fit-content;"><slot /></h5>
     {/if}
 
     <div class="col d-flex justify-content-end align-items-center p-0 m-0">
@@ -30,7 +30,7 @@
         {/if}
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-static-element-interactions -->
-      <div style="width: fit-content !important;" class="collapsed accordion-button collapsed" data-bs-target="#item_1" data-bs-toggle="collapse" on:click></div>
+      <div style="width: fit-content !important;" class="collapsed accordion-button px-1" data-bs-target="#item_1" data-bs-toggle="collapse" on:click></div>
     </div>
 
   </div>
@@ -38,7 +38,7 @@
 
 <style>
     .accordion-button::after {
-        margin-left: 1.1rem;
+        margin-left: 0.5rem;
     }
     .content_title {
         display: flex;
