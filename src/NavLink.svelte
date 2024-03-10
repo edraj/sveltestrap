@@ -25,6 +25,8 @@
   }
 </script>
 
-<a {...$$restProps} {href} on:click on:click={handleClick} class={classes}>
-  <slot />
-</a>
+<li>
+  <a {...$$restProps} {href} on:click on:click={handleClick} class={classes}>
+    <slot />
+  </a>
+</li>
