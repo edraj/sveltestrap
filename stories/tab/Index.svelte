@@ -12,6 +12,8 @@
   import verticalSource from '!!raw-loader!./Vertical.svelte';
   import Disabled from './Disabled.svelte';
   import disabledSource from '!!raw-loader!./Disabled.svelte';
+  import DisabledClick from "./DisabledClick.svelte";
+  import disabledClickSource from '!!raw-loader!./DisabledClick.svelte';
 </script>
 
 <h1>TabContent and TabPane</h1>
@@ -32,6 +34,10 @@
 
 <Example title="Disabled" source={disabledSource}>
   <Disabled />
+</Example>
+
+<Example title="Disabled with on click" source={disabledClickSource}>
+  <DisabledClick />
 </Example>
 
 <Example title="Slots" source={slotsSource}>

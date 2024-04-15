@@ -10,6 +10,7 @@
   export let disabled = false;
   export let tab = undefined;
   export let tabId = undefined;
+  export let onClick = undefined;
 
   const tabs = getContext('tabs');
   const { activeTabId, setActiveTab } = getContext('tabContent');
@@ -27,14 +28,16 @@
 </script>
 
 {#if tabs}
-  <NavItem>
+  <NavItem on:click={onClick}>
     <NavLink active={tabOpen} {disabled} on:click={() => setActiveTab(tabId)}>
       {#if tab}{tab}{/if}
       <slot name="tab" />
     </NavLink>
   </NavItem>
 {:else}
-  <div {...$$restProps} class={classes}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div {...$$restProps} class={classes} on:click={onClick}>
     <slot />
   </div>
 {/if}

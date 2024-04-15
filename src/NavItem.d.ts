@@ -7,5 +7,5 @@ declare module 'sveltestrap' {
     class?: string;
   }
 
-  export class NavItem extends SvelteComponent<NavItemProps, any, any> {}
+  export class NavItem extends SvelteComponent<NavItemProps, any, any, {click: WindowEventMap['click']}> {}
 }

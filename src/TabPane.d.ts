@@ -8,11 +8,12 @@ declare module 'sveltestrap' {
     disabled?: boolean;
     tabId?: number | string;
     class?: string;
+    onClick: any;
   }
 
   export class TabPane extends SvelteComponent<
     TabPaneProps,
     any,
-    { default: {}; tab: {} }
+    { default: {}; tab: {}, click: WindowEventMap['click'] }
   > {}
 }

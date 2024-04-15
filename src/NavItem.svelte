@@ -8,6 +8,7 @@
   $: classes = classnames(className, 'nav-item', active ? 'active' : false);
 </script>
 
-<li {...$$restProps} class={classes}>
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<li {...$$restProps} class={classes} on:click>
   <slot />
 </li>
