@@ -6,6 +6,8 @@
   import sampleSource from '!!raw-loader!./Sample.svelte';
   import Toggler from './Toggler.svelte';
   import togglerSource from '!!raw-loader!./Toggler.svelte';
+  import ScrollTo from './ScrollTo.svelte';
+  import sampleScrollTo from '!!raw-loader!./ScrollTo.svelte';
 </script>
 
 <h1>Navbar</h1>
@@ -34,6 +36,10 @@
 
 <Example title="Toggler" source={togglerSource} stacked>
   <Toggler />
+</Example>
+
+<Example source={sampleScrollTo} stacked>
+  <ScrollTo />
 </Example>
 
 <!-- TODO Add {fixed} {expand} sample -->

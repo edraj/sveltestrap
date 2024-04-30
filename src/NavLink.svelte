@@ -19,8 +19,13 @@
       return;
     }
 
-    if (href === '#') {
+    if (href.startsWith('#')) {
       e.preventDefault();
+      const el = document.querySelector(e.target.getAttribute('href'));
+      if (!el) return;
+      el.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   }
 </script>
