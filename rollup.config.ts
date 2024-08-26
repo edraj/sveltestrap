@@ -6,24 +6,31 @@ import bundleSize from 'rollup-plugin-bundle-size';
 import svelte from 'rollup-plugin-svelte';
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
-import pkg from './package.json';
+// import pkg from './package.json';
 import sveltePreprocess from 'svelte-preprocess';
+import fs from 'fs/promises';
+import autoprefixer from "autoprefixer"
 
 const production = !process.env.ROLLUP_WATCH;
 
-const { name } = pkg;
+async function getPkg() {
+  const pkg = JSON.parse(await fs.readFile('./package.json', 'utf8'));
+  return pkg;
+}
+const pkg = await getPkg();
+const { name, main, module } = pkg;
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.module,
+      file: module,
       format: 'es',
       sourcemap: true,
       name
     },
     {
-      file: pkg.main,
+      file: main,
       format: 'umd',
       sourcemap: true,
       name
@@ -41,7 +48,7 @@ export default {
       preprocess: sveltePreprocess({
         sourceMap: !production,
         postcss: {
-          plugins: [require('autoprefixer')()]
+          plugins: [autoprefixer()]
         }
       }),
       emitCss: false

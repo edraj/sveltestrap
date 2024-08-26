@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte';
   import { fade } from 'svelte/transition';
-  import toggle from './toggle.ts';
+  import toggle from './toggle';
 
   const dispatch = createEventDispatcher();
 

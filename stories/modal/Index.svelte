@@ -29,7 +29,7 @@
   Bootstrap Modals
 </a>
 
-<Example source={sampleSource}>
+<Example title="sample" source={sampleSource}>
   <Sample />
 </Example>
 

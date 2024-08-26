@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import { setContext } from 'svelte';
-  import classnames from './utils.ts';
+  import classnames from './utils';
 
   setContext('figure', true);
 

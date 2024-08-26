@@ -8,6 +8,7 @@
       "resolveJsonModule": true,
       "skipLibCheck": true,
       "sourceMap": true,
+      "verbatimModuleSyntax": true,
       "paths": {
           "@": [
               "./src"
@@ -24,6 +25,7 @@
       "src/**/*.svelte",
       ".routify/**.js",
       "test/**/*.ts",
-      "test/**/*.js"
+      "test/**/*.js",
+      "rollup.config.ts",
   ]
 }
