@@ -1,7 +1,5 @@
-// install the lib first
-import preprocess from "svelte-preprocess";
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 export default {
-  preprocess: preprocess()
-  // ...other svelte options
+  preprocess: vitePreprocess()
 };

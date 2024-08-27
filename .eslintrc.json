@@ -1,47 +1,45 @@
 {
-  "parser": "@babel/eslint-parser",
   "env": {
-    "browser": true,
-    "es6": true,
-    "jest/globals": true,
+    "es2017": true,
+    "commonjs": true,
     "node": true
   },
-  "settings": {
-    "svelte3/typescript": true
-  },
-  "overrides": [
-    {
-      "files": ["*.svelte"],
-      "parser": "svelte-eslint-parser",
-      "parserOptions": {
-      "parser": {
-        "ts": "@typescript-eslint/parser",
-        "typescript": "@typescript-eslint/parser"
-      }
-    },
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "off"
-      }
-    },
-    {
-      "files": ["*.ts"],
-      "parser": "@typescript-eslint/parser"
-    }
-  ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:svelte/recommended",
-    "plugin:storybook/recommended"
-  ],
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "plugins": [
-    "jest",
-    "svelte",
-    "@typescript-eslint"
-  ]
+    "vitest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vitest/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "ignorePatterns": [
+    "**/*.snap.js"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parser": "@typescript-eslint/parser"
+    },
+    {
+      "files": [
+        "*.svelte"
+      ],
+      "parser": "svelte-eslint-parser"
+    }
+  ],
+  "rules": {
+    "eqeqeq": "error",
+    "no-useless-escape": "off",
+    "no-unused-expressions": "off",
+    "no-inner-declarations": "off",
+    "no-unused-vars": "off",
+    "no-self-assign": "off",
+    "no-undef": "off"
+  }
 }

@@ -1,24 +1,58 @@
-/** @type { import('@storybook/svelte-vite').StorybookConfig } */
-export default {
-  stories: ['../stories/index.stories.ts'], 
-  // stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx|svelte)"],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-  ],
-  features: {
-    // TODO: migrate
-    // https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#storystorev7-enabled-by-default
-    storyStoreV7: false,
-  },
+import path from 'path';
+import preprocess from 'svelte-preprocess';
 
+export default {
+  stories: [
+    '../src/**/*.mdx',
+    '../src/**/*.stories.@(js|jsx|ts|tsx|svelte)'
+  ],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-svelte-csf'
+  ],
+  docs: {
+    autodocs: 'tag'
+  },
   framework: {
     name: '@storybook/svelte-webpack5',
-    options: {}
-  },
+    options: {
+      preprocess: preprocess({
+        tsconfigFile: './tsconfig.json',
+        transpileOnly: true
+      }),
+      builder: {
+        name: 'webpack5',
+        options: {
+          lazyCompilation: true
+        }
+      },
+      onwarn: (warning, handler) => {
+        if (
+          warning.code === 'a11y-missing-content' ||
+          warning.code === 'a11y-no-noninteractive-tabindex' ||
+          warning.code === 'a11y-click-events-have-key-events' ||
+          warning.code === 'a11y-no-static-element-interactions'
+        ) {
+          return;
+        }
 
-  docs: {
-    autodocs: "tag"
+        handler(warning);
+      }
+    }
+  },
+  webpackFinal: async (config, { configType }) => {
+    config.optimization = {
+      minimize: configType === 'PRODUCTION'
+    };
+
+    config.resolve = {
+      alias: {
+        '@sveltestrap/sveltestrap': path.resolve(__dirname, '../src/')
+      },
+      extensions: [...config.resolve.extensions, '.svelte', '.ts']
+    };
+
+    return config;
   }
 };

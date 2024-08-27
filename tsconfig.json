@@ -1,29 +1,21 @@
 {
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": ["src/**/*.d.ts", "vitest.setup.js"],
+  "exclude": ["node_modules/*", "src/**/*.spec.js", "src/**/*.js", "src/**/*.stories.svelte", "src/**/*.svelte"],
   "compilerOptions": {
-      "module": "es2022",
-      "moduleResolution": "node",
-      "target": "es2022",
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true,
-      "skipLibCheck": true,
-      "sourceMap": true,
-      "paths": {
-          "@": [
-              "./src"
-          ],
-          "@/*": [
-              "./src/*"
-          ]
-      }
-  },
-  "include": [
-      "src/**/*.d.ts",
-      "src/**/*.ts",
-      "src/**/*.js",
-      "src/**/*.svelte",
-      ".routify/**.js",
-      "test/**/*.ts",
-      "test/**/*.js"
-  ]
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "paths": {
+      "@sveltestrap/sveltestrap": ["src/index"]
+    },
+    "types": ["vitest/globals"]
+  }
 }

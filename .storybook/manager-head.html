@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+  <style>
+    [role='main']:nth-child(5) div:has(+ [offset]) {
+      display: none;
+    }
+
+    [role='main']:nth-child(5) [offset] {
+      top: 0;
+      height: 100%;
+    }
+
+    [id*="stories"],
+    [title="Shortcuts"],
+    .sidebar-item[data-nodetype="story"],
+    .sidebar-subheading-action,
+    .sidebar-item div svg,
+    .search-field {
+      display: none !important;
+    }
+
+    [data-nodetype="root"] > button:first-child {
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
