@@ -21,7 +21,7 @@
   "scripts": {
     "start": "storybook dev -p 6006",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "dist": "rollup -c --configPlugin @rollup/plugin-typescript",
+    "dist": "rollup -c",
     "docs": "storybook build -o docs && cp CNAME ./docs && cp -r ./v4 ./docs",
     "format": "prettier --write --plugin-search-dir=. ./src ./stories ./.storybook",
     "lint": "tsc --noEmit && eslint ./src --ext .ts --ext .svelte",
@@ -99,7 +99,7 @@
     "svelte-loader": "^3.2.3",
     "svelte-preprocess": "^6.0.2",
     "ts-jest": "^29.2.5",
-    "typescript": "^5.5.4",
+    "typescript": "^5.2.2",
     "wait-for-localhost-cli": "^3.2.0",
     "webpack": "^5.94.0",
     "webpack-cli": "^5.1.4",

@@ -8,7 +8,6 @@
       "resolveJsonModule": true,
       "skipLibCheck": true,
       "sourceMap": true,
-      "verbatimModuleSyntax": true,
       "paths": {
           "@": [
               "./src"
@@ -26,6 +25,6 @@
       ".routify/**.js",
       "test/**/*.ts",
       "test/**/*.js",
-      "rollup.config.ts",
+      "rollup.config.js"
   ]
 }
