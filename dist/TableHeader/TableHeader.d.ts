@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface TableHeaderEvents {}
 
 export interface TableHeaderSlots {
   default: {};
+class?: string;
 }
 
-export default class TableHeader extends SvelteComponent<TableHeaderProps, TableHeaderEvents, TableHeaderSlots> {}
+export class TableHeader extends SvelteComponent<TableHeaderProps, TableHeaderEvents, TableHeaderSlots> {}
+
+}

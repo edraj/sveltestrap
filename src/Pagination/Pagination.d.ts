@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -12,6 +13,9 @@ export interface PaginationEvents {}
 
 export interface PaginationSlots {
   default: {};
+class?: string;
 }
 
-export default class Pagination extends SvelteComponent<PaginationProps, PaginationEvents, PaginationSlots> {}
+export class Pagination extends SvelteComponent<PaginationProps, PaginationEvents, PaginationSlots> {}
+
+}

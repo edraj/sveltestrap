@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLImgAttributes } from 'svelte/elements';
 
@@ -11,6 +12,9 @@ export interface ImageProps extends HTMLImgAttributes {
 
 export interface ImageEvents {}
 
-export interface ImageSlots {}
+export interface ImageSlots {class?: string;
+}
 
-export default class Image extends SvelteComponent<ImageProps, ImageEvents, ImageSlots> {}
+export class Image extends SvelteComponent<ImageProps, ImageEvents, ImageSlots> {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,10 +8,13 @@ export interface InlineContainerEvents {}
 
 export interface InlineContainerSlots {
   default: {};
+class?: string;
 }
 
-export default class InlineContainer extends SvelteComponent<
+export class InlineContainer extends SvelteComponent<
   InlineContainerProps,
   InlineContainerEvents,
   InlineContainerSlots
 > {}
+
+}

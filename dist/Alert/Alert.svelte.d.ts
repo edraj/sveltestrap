@@ -4,6 +4,8 @@
 export default class Alert extends SvelteComponent<{
     [x: string]: any;
     class?: string | undefined;
+    theme?: string | undefined;
+    toggle?: Function | undefined;
     children?: any;
     closeAriaLabel?: string | undefined;
     closeClassName?: string | undefined;
@@ -12,8 +14,6 @@ export default class Alert extends SvelteComponent<{
     fade?: boolean | undefined;
     heading?: string | undefined;
     isOpen?: boolean | undefined;
-    toggle?: Function | undefined;
-    theme?: string | undefined;
     transition?: object | undefined;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -30,6 +30,8 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         class?: string | undefined;
+        theme?: string | undefined;
+        toggle?: Function | undefined;
         children?: any;
         closeAriaLabel?: string | undefined;
         closeClassName?: string | undefined;
@@ -38,8 +40,6 @@ declare const __propDef: {
         fade?: boolean | undefined;
         heading?: string | undefined;
         isOpen?: boolean | undefined;
-        toggle?: Function | undefined;
-        theme?: string | undefined;
         transition?: object | undefined;
     };
     events: {

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { ContainerType } from '../shared';
@@ -23,6 +24,9 @@ export interface PopoverEvents {}
 export interface PopoverSlots {
   default: {};
   title: {};
+class?: string;
 }
 
-export default class Popover extends SvelteComponent<PopoverProps, PopoverEvents, PopoverSlots> {}
+export class Popover extends SvelteComponent<PopoverProps, PopoverEvents, PopoverSlots> {}
+
+}

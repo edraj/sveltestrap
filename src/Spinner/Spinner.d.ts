@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { TextColor } from '../shared';
 import { HTMLAttributes } from 'svelte/elements';
@@ -12,6 +13,9 @@ export interface SpinnerEvents {}
 
 export interface SpinnerSlots {
   default: {};
+class?: string;
 }
 
-export default class Spinner extends SvelteComponent<SpinnerProps, SpinnerEvents, SpinnerSlots> {}
+export class Spinner extends SvelteComponent<SpinnerProps, SpinnerEvents, SpinnerSlots> {}
+
+}

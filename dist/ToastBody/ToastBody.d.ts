@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface ToastBodyEvents {}
 
 export interface ToastBodySlots {
   default: {};
+class?: string;
 }
 
-export default class ToastBody extends SvelteComponent<ToastBodyProps, ToastBodyEvents, ToastBodySlots> {}
+export class ToastBody extends SvelteComponent<ToastBodyProps, ToastBodyEvents, ToastBodySlots> {}
+
+}

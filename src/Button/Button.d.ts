@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 import { Color } from '../shared';
@@ -26,6 +27,9 @@ export interface ButtonEvents {
 
 export interface ButtonSlots {
   default: {};
+class?: string;
 }
 
-export default class Button extends SvelteComponent<ButtonProps, ButtonEvents, ButtonSlots> {}
+export class Button extends SvelteComponent<ButtonProps, ButtonEvents, ButtonSlots> {}
+
+}

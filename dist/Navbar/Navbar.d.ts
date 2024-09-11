@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { BackgroundColor } from '../shared';
@@ -17,6 +18,9 @@ export interface NavbarEvents {}
 
 export interface NavbarSlots {
   default: {};
+class?: string;
 }
 
-export default class Navbar extends SvelteComponent<NavbarProps, NavbarEvents, NavbarSlots> {}
+export class Navbar extends SvelteComponent<NavbarProps, NavbarEvents, NavbarSlots> {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface CardGroupEvents {}
 
 export interface CardGroupSlots {
   default: {};
+class?: string;
 }
 
-export default class CardGroup extends SvelteComponent<CardGroupProps, CardGroupEvents, CardGroupSlots> {}
+export class CardGroup extends SvelteComponent<CardGroupProps, CardGroupEvents, CardGroupSlots> {}
+
+}

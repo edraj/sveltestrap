@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,10 +8,13 @@ export interface OffcanvasBodyEvents {}
 
 export interface OffcanvasBodySlots {
   default: {};
+class?: string;
 }
 
-export default class OffcanvasBody extends SvelteComponent<
+export class OffcanvasBody extends SvelteComponent<
   OffcanvasBodyProps,
   OffcanvasBodyEvents,
   OffcanvasBodySlots
 > {}
+
+}

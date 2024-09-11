@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -9,6 +10,9 @@ export interface NavbarBrandEvents {
 
 export interface NavbarBrandSlots {
   default: {};
+class?: string;
 }
 
-export default class NavbarBrand extends SvelteComponent<NavbarBrandProps, NavbarBrandEvents, NavbarBrandSlots> {}
+export class NavbarBrand extends SvelteComponent<NavbarBrandProps, NavbarBrandEvents, NavbarBrandSlots> {}
+
+}

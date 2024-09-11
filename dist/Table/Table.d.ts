@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { Breakpoints } from '../shared';
 import { SvelteComponent } from 'svelte';
 import { HTMLTableAttributes } from 'svelte/elements';
@@ -18,6 +19,9 @@ export interface TableSlots<T> {
   default: {
     row?: T;
   };
+class?: string;
 }
 
-export default class Table<T> extends SvelteComponent<TableProps<T>, TableEvents, TableSlots<T>> {}
+export class Table<T> extends SvelteComponent<TableProps<T>, TableEvents, TableSlots<T>> {}
+
+}

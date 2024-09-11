@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { ColumnProps } from '../shared';
@@ -13,6 +14,9 @@ export interface RowEvents {}
 
 export interface RowSlots {
   default: {};
+class?: string;
 }
 
-export default class Row extends SvelteComponent<RowProps, RowEvents, RowSlots> {}
+export class Row extends SvelteComponent<RowProps, RowEvents, RowSlots> {}
+
+}

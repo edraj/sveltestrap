@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { ContainerType, Placement } from '../shared';
@@ -31,6 +32,9 @@ export interface OffcanvasEvents {
 export interface OffcanvasSlots {
   default: {};
   header: {};
+class?: string;
 }
 
-export default class Offcanvas extends SvelteComponent<OffcanvasProps, OffcanvasEvents, OffcanvasSlots> {}
+export class Offcanvas extends SvelteComponent<OffcanvasProps, OffcanvasEvents, OffcanvasSlots> {}
+
+}

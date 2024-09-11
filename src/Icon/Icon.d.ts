@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface IconProps extends HTMLAttributes<HTMLElement> {
 
 export interface IconEvents {}
 
-export interface IconSlots {}
+export interface IconSlots {class?: string;
+}
 
-export default class Icon extends SvelteComponent<IconProps, IconEvents, IconSlots> {}
+export class Icon extends SvelteComponent<IconProps, IconEvents, IconSlots> {}
+
+}

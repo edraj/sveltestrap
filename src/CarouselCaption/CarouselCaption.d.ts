@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -10,10 +11,13 @@ export interface CarouselCaptionEvents {}
 
 export interface CarouselCaptionSlots {
   default: {};
+class?: string;
 }
 
-export default class CarouselCaption extends SvelteComponent<
+export class CarouselCaption extends SvelteComponent<
   CarouselCaptionProps,
   CarouselCaptionEvents,
   CarouselCaptionSlots
 > {}
+
+}

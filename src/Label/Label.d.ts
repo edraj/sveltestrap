@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLLabelAttributes } from 'svelte/elements';
 import { ColumnProps } from '../Col';
@@ -18,6 +19,9 @@ export interface LabelEvents {}
 
 export interface LabelSlots {
   default: {};
+class?: string;
 }
 
-export default class Label extends SvelteComponent<LabelProps, LabelEvents, LabelSlots> {}
+export class Label extends SvelteComponent<LabelProps, LabelEvents, LabelSlots> {}
+
+}

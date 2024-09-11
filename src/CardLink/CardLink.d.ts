@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface CardLinkEvents {}
 
 export interface CardLinkSlots {
   default: {};
+class?: string;
 }
 
-export default class CardLink extends SvelteComponent<CardLinkProps, CardLinkEvents, CardLinkSlots> {}
+export class CardLink extends SvelteComponent<CardLinkProps, CardLinkEvents, CardLinkSlots> {}
+
+}

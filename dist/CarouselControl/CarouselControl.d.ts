@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -11,10 +12,13 @@ export interface CarouselControlProps extends HTMLAnchorAttributes {
 
 export interface CarouselControlEvents {}
 
-export interface CarouselControlSlots {}
+export interface CarouselControlSlots {class?: string;
+}
 
-export default class CarouselControl extends SvelteComponent<
+export class CarouselControl extends SvelteComponent<
   CarouselControlProps,
   CarouselControlEvents,
   CarouselControlSlots
 > {}
+
+}

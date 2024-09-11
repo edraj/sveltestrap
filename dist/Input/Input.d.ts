@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLInputAttributes, HTMLSelectAttributes, HTMLTextareaAttributes } from 'svelte/elements';
 import { Color, InputType } from '../shared';
@@ -51,6 +52,9 @@ export interface InputEvents {
 
 export interface InputSlots {
   default?: {};
+class?: string;
 }
 
-export default class Input extends SvelteComponent<InputProps, InputEvents, InputSlots> {}
+export class Input extends SvelteComponent<InputProps, InputEvents, InputSlots> {}
+
+}

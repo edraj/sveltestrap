@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { ButtonProps } from '../Button';
 
@@ -12,10 +13,13 @@ export interface NavbarTogglerEvents {
 
 export interface NavbarTogglerSlots {
   default: {};
+class?: string;
 }
 
-export default class NavbarToggler extends SvelteComponent<
+export class NavbarToggler extends SvelteComponent<
   NavbarTogglerProps,
   NavbarTogglerEvents,
   NavbarTogglerSlots
 > {}
+
+}

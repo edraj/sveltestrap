@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -11,6 +12,9 @@ export interface FigureEvents {}
 export interface FigureSlots {
   default: {};
   caption?: {};
+class?: string;
 }
 
-export default class Figure extends SvelteComponent<FigureProps, FigureEvents, FigureSlots> {}
+export class Figure extends SvelteComponent<FigureProps, FigureEvents, FigureSlots> {}
+
+}

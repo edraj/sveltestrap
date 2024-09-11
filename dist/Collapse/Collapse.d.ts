@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -27,6 +28,9 @@ export interface CollapseEvents {
 
 export interface CollapseSlots {
   default: {};
+class?: string;
 }
 
-export default class Collapse extends SvelteComponent<CollapseProps, CollapseEvents, CollapseSlots> {}
+export class Collapse extends SvelteComponent<CollapseProps, CollapseEvents, CollapseSlots> {}
+
+}

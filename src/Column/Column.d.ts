@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLTdAttributes } from 'svelte/elements';
 
@@ -12,6 +13,9 @@ export interface ContainerSlots {
   default: {};
   footer?: {};
   header?: {};
+class?: string;
 }
 
-export default class Container extends SvelteComponent<ContainerProps, ContainerEvents, ContainerSlots> {}
+export class Container extends SvelteComponent<ContainerProps, ContainerEvents, ContainerSlots> {}
+
+}

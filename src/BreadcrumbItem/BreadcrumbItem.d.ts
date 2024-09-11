@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLLiAttributes } from 'svelte/elements';
 
@@ -9,10 +10,13 @@ export interface BreadcrumbItemEvents {}
 
 export interface BreadcrumbItemSlots {
   default: {};
+class?: string;
 }
 
-export default class BreadcrumbItem extends SvelteComponent<
+export class BreadcrumbItem extends SvelteComponent<
   BreadcrumbItemProps,
   BreadcrumbItemEvents,
   BreadcrumbItemSlots
 > {}
+
+}

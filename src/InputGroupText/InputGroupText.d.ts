@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,10 +8,13 @@ export interface InputGroupTextEvents {}
 
 export interface InputGroupTextSlots {
   default: {};
+class?: string;
 }
 
-export default class InputGroupText extends SvelteComponent<
+export class InputGroupText extends SvelteComponent<
   InputGroupTextProps,
   InputGroupTextEvents,
   InputGroupTextSlots
 > {}
+
+}

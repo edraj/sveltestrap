@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLOlAttributes } from 'svelte/elements';
 
@@ -8,10 +9,13 @@ export interface CarouselIndicatorsProps extends HTMLOlAttributes {
 
 export interface CarouselIndicatorsEvents {}
 
-export interface CarouselIndicatorsSlots {}
+export interface CarouselIndicatorsSlots {class?: string;
+}
 
-export default class CarouselIndicators extends SvelteComponent<
+export class CarouselIndicators extends SvelteComponent<
   CarouselIndicatorsProps,
   CarouselIndicatorsEvents,
   CarouselIndicatorsSlots
 > {}
+
+}

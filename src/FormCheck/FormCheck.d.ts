@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLInputAttributes } from 'svelte/elements';
 
@@ -22,6 +23,9 @@ export interface FormCheckEvents {
 export interface FormCheckSlots {
   default: {};
   label?: {};
+class?: string;
 }
 
-export default class FormCheck extends SvelteComponent<FormCheckProps, FormCheckEvents, FormCheckSlots> {}
+export class FormCheck extends SvelteComponent<FormCheckProps, FormCheckEvents, FormCheckSlots> {}
+
+}

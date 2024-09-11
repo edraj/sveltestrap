@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -27,6 +28,9 @@ export interface ColEvents {}
 
 export interface ColSlots {
   default: {};
+class?: string;
 }
 
-export default class Col extends SvelteComponent<ColProps, ColEvents, ColSlots> {}
+export class Col extends SvelteComponent<ColProps, ColEvents, ColSlots> {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 import { Border, Color, Shadow } from '../shared';
@@ -19,6 +20,9 @@ export interface BadgeEvents {}
 
 export interface BadgeSlots {
   default: {};
+class?: string;
 }
 
-export default class Badge extends SvelteComponent<BadgeProps, BadgeEvents, BadgeSlots> {}
+export class Badge extends SvelteComponent<BadgeProps, BadgeEvents, BadgeSlots> {}
+
+}

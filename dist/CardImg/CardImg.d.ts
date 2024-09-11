@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLImgAttributes } from 'svelte/elements';
 
@@ -8,6 +9,9 @@ export interface CardImgProps extends HTMLImgAttributes {
 
 export interface CardImgEvents {}
 
-export interface CardImgSlots {}
+export interface CardImgSlots {class?: string;
+}
 
-export default class CardImg extends SvelteComponent<CardImgProps, CardImgEvents, CardImgSlots> {}
+export class CardImg extends SvelteComponent<CardImgProps, CardImgEvents, CardImgSlots> {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -11,10 +12,13 @@ export interface OffcanvasHeaderEvents {}
 export interface OffcanvasHeaderSlots {
   default: {};
   close: {};
+class?: string;
 }
 
-export default class OffcanvasHeader extends SvelteComponent<
+export class OffcanvasHeader extends SvelteComponent<
   OffcanvasHeaderProps,
   OffcanvasHeaderEvents,
   OffcanvasHeaderSlots
 > {}
+
+}

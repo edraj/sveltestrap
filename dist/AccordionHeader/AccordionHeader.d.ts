@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,10 +8,13 @@ export interface AccordionHeaderEvents {}
 
 export interface AccordionHeaderSlots {
   default: {};
+class?: string;
 }
 
-export default class AccordionHeader extends SvelteComponent<
+export class AccordionHeader extends SvelteComponent<
   AccordionHeaderProps,
   AccordionHeaderEvents,
   AccordionHeaderSlots
 > {}
+
+}

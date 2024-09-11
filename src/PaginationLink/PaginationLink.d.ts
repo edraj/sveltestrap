@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -15,10 +16,13 @@ export interface PaginationLinkEvents {
 
 export interface PaginationLinkSlots {
   default: {};
+class?: string;
 }
 
-export default class PaginationLink extends SvelteComponent<
+export class PaginationLink extends SvelteComponent<
   PaginationLinkProps,
   PaginationLinkEvents,
   PaginationLinkSlots
 > {}
+
+}

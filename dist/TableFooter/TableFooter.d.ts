@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface TableFooterEvents {}
 
 export interface TableFooterSlots {
   default: {};
+class?: string;
 }
 
-export default class TableFooter extends SvelteComponent<TableFooterProps, TableFooterEvents, TableFooterSlots> {}
+export class TableFooter extends SvelteComponent<TableFooterProps, TableFooterEvents, TableFooterSlots> {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import type { FadeProps } from '../Fade';
@@ -38,6 +39,9 @@ export interface ModalEvents {
 export interface ModalSlots {
   default: {};
   external: {};
+class?: string;
 }
 
-export default class Modal extends SvelteComponent<ModalProps, ModalEvents, ModalSlots> {}
+export class Modal extends SvelteComponent<ModalProps, ModalEvents, ModalSlots> {}
+
+}

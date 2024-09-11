@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -18,6 +19,9 @@ export interface NavEvents {}
 
 export interface NavSlots {
   default: {};
+class?: string;
 }
 
-export default class Nav extends SvelteComponent<NavProps, NavEvents, NavSlots> {}
+export class Nav extends SvelteComponent<NavProps, NavEvents, NavSlots> {}
+
+}

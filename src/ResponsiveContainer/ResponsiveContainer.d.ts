@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 
 export interface ResponsiveContainerProps {
@@ -8,10 +9,13 @@ export interface ResponsiveContainerEvents {}
 
 export interface ResponsiveContainerSlots {
   default: {};
+class?: string;
 }
 
-export default class ResponsiveContainer extends SvelteComponent<
+export class ResponsiveContainer extends SvelteComponent<
   ResponsiveContainerProps,
   ResponsiveContainerEvents,
   ResponsiveContainerSlots
 > {}
+
+}

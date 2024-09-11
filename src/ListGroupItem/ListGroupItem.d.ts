@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAnchorAttributes } from 'svelte/elements';
 import { Color } from '../shared';
@@ -17,10 +18,13 @@ export interface ListGroupItemEvents {
 
 export interface ListGroupItemSlots {
   default: {};
+class?: string;
 }
 
-export default class ListGroupItem extends SvelteComponent<
+export class ListGroupItem extends SvelteComponent<
   ListGroupItemProps,
   ListGroupItemEvents,
   ListGroupItemSlots
 > {}
+
+}

@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -12,6 +13,9 @@ export interface ListGroupEvents {}
 
 export interface ListGroupSlots {
   default: {};
+class?: string;
 }
 
-export default class ListGroup extends SvelteComponent<ListGroupProps, ListGroupEvents, ListGroupSlots> {}
+export class ListGroup extends SvelteComponent<ListGroupProps, ListGroupEvents, ListGroupSlots> {}
+
+}

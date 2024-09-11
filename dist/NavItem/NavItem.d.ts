@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLLiAttributes } from 'svelte/elements';
 
@@ -9,6 +10,9 @@ export interface NavItemEvents {}
 
 export interface NavItemSlots {
   default: {};
+class?: string;
 }
 
-export default class NavItem extends SvelteComponent<NavItemProps, NavItemEvents, NavItemSlots, {click: WindowEventMap['click']}> {}
+export class NavItem extends SvelteComponent<NavItemProps, NavItemEvents, NavItemSlots, {click: WindowEventMap['click']}> {}
+
+}

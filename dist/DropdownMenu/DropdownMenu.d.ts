@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -10,6 +11,9 @@ export interface DropdownMenuEvents {}
 
 export interface DropdownMenuSlots {
   default: {};
+class?: string;
 }
 
-export default class DropdownMenu extends SvelteComponent<DropdownMenuProps, DropdownMenuEvents, DropdownMenuSlots> {}
+export class DropdownMenu extends SvelteComponent<DropdownMenuProps, DropdownMenuEvents, DropdownMenuSlots> {}
+
+}

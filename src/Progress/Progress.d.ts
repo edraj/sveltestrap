@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { Color } from '../shared';
@@ -18,6 +19,9 @@ export interface ProgressEvents {}
 
 export interface ProgressSlots {
   default: {};
+class?: string;
 }
 
-export default class Progress extends SvelteComponent<ProgressProps, ProgressEvents, ProgressSlots> {}
+export class Progress extends SvelteComponent<ProgressProps, ProgressEvents, ProgressSlots> {}
+
+}

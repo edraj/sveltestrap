@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -10,6 +11,9 @@ export interface CarouselItemEvents {}
 
 export interface CarouselItemSlots {
   default: {};
+class?: string;
 }
 
-export default class CarouselItem extends SvelteComponent<CarouselItemProps, CarouselItemEvents, CarouselItemSlots> {}
+export class CarouselItem extends SvelteComponent<CarouselItemProps, CarouselItemEvents, CarouselItemSlots> {}
+
+}

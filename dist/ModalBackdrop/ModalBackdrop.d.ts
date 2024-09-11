@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -12,10 +13,13 @@ export interface ModalBackdropEvents {
 
 export interface ModalBackdropSlots {
   default: {};
+class?: string;
 }
 
-export default class ModalBackdrop extends SvelteComponent<
+export class ModalBackdrop extends SvelteComponent<
   ModalBackdropProps,
   ModalBackdropEvents,
   ModalBackdropSlots
 > {}
+
+}

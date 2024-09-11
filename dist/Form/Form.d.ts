@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLFormAttributes } from 'svelte/elements';
 
@@ -12,6 +13,9 @@ export interface FormEvents {
 
 export interface FormSlots {
   default: {};
+class?: string;
 }
 
-export default class Form extends SvelteComponent<FormProps, FormEvents, FormSlots> {}
+export class Form extends SvelteComponent<FormProps, FormEvents, FormSlots> {}
+
+}

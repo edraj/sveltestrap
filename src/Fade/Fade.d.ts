@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -23,6 +24,9 @@ export interface FadeEvents {
 
 export interface FadeSlots {
   default: {};
+class?: string;
 }
 
-export default class Fade extends SvelteComponent<FadeProps, FadeEvents, FadeSlots> {}
+export class Fade extends SvelteComponent<FadeProps, FadeEvents, FadeSlots> {}
+
+}

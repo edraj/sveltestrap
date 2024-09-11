@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 import { FadeProps } from '../Fade';
@@ -21,6 +22,9 @@ export interface AlertEvents {}
 export interface AlertSlots {
   default: {};
   heading?: {};
+class?: string;
 }
 
-export default class Alert extends SvelteComponent<AlertProps, AlertEvents, AlertSlots> {}
+export class Alert extends SvelteComponent<AlertProps, AlertEvents, AlertSlots> {}
+
+}

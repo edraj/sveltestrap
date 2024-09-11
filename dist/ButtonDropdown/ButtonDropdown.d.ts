@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { DropdownProps } from '../Dropdown';
 
@@ -9,10 +10,13 @@ export interface ButtonDropdownEvents {
 
 export interface ButtonDropdownSlots {
   default: {};
+class?: string;
 }
 
-export default class ButtonDropdown extends SvelteComponent<
+export class ButtonDropdown extends SvelteComponent<
   ButtonDropdownProps,
   ButtonDropdownEvents,
   ButtonDropdownSlots
 > {}
+
+}

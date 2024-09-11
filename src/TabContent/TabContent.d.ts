@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -9,6 +10,9 @@ export interface TabContentEvents {
 
 export interface TabContentSlots {
   default: {};
+class?: string;
 }
 
-export default class TabContent extends SvelteComponent<TabContentProps, TabContentEvents, TabContentSlots> {}
+export class TabContent extends SvelteComponent<TabContentProps, TabContentEvents, TabContentSlots> {}
+
+}

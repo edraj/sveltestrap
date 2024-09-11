@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 
 export interface StylesProps {
@@ -7,6 +8,9 @@ export interface StylesProps {
 
 export interface StylesEvents {}
 
-export interface StylesSlots {}
+export interface StylesSlots {class?: string;
+}
 
-export default class Styles extends SvelteComponent<StylesProps, StylesEvents, StylesSlots> {}
+export class Styles extends SvelteComponent<StylesProps, StylesEvents, StylesSlots> {}
+
+}

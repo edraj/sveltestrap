@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -7,6 +8,9 @@ export interface PortalEvents {}
 
 export interface PortalSlots {
   default: {};
+class?: string;
 }
 
-export default class Portal extends SvelteComponent<PortalProps, PortalEvents, PortalSlots> {}
+export class Portal extends SvelteComponent<PortalProps, PortalEvents, PortalSlots> {}
+
+}

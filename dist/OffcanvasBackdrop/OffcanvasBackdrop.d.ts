@@ -1,3 +1,4 @@
+declare module 'sveltestrap' {
 import { SvelteComponent } from 'svelte';
 import { HTMLAttributes } from 'svelte/elements';
 
@@ -10,10 +11,13 @@ export interface OffcanvasBackdropEvents {
   click: WindowEventMap['click'];
 }
 
-export interface OffcanvasBackdropSlots {}
+export interface OffcanvasBackdropSlots {class?: string;
+}
 
-export default class OffcanvasBackdrop extends SvelteComponent<
+export class OffcanvasBackdrop extends SvelteComponent<
   OffcanvasBackdropProps,
   OffcanvasBackdropEvents,
   OffcanvasBackdropSlots
 > {}
+
+}

@@ -312,6 +312,8 @@
   <Button color="primary" on:click={() => (isOpen = true)}>Open</Button>
 
   <Offcanvas {isOpen} body={false} style="width: 150px" class="bg-danger">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div on:click={() => (isOpen = false)}>
       <img src="https://picsum.photos/150/1200" alt="Meaningless content" />
     </div>
