@@ -6,7 +6,6 @@
 
   import { classnames } from '../utils';
   import { Icon } from '../Icon/index.js';
-  // import { extraPrefix } from '../AccordionHeader/index.js';
 
   /**
    * Additional CSS classes for container element.

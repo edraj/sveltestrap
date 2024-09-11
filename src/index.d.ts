@@ -79,7 +79,7 @@ export { Styles } from './Styles';
 export { Table } from './Table';
 export { TabContent } from './TabContent';
 export { TabPane } from './TabPane';
-export { Theme, ThemeToggler, colorMode, toggleColorMode, useColorMode } from './Theme';
+export { Theme, ThemeToggler } from './Theme';
 export { Toast } from './Toast';
 export { ToastBody } from './ToastBody';
 export { ToastHeader } from './ToastHeader';
