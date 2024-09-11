@@ -56,7 +56,7 @@
     "build": "svelte-package --input ./src",
     "docs:build": "storybook build -o docs && cp -r ./.storybook/docs/* ./docs",
     "docs:deploy": "pnpm run docs:build && npx gh-pages -d docs",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check": "svelte-check",
     "lint": "eslint -c ./.eslintrc.json --fix \"{tests/app/src,src}/**/*.{js,ts,json,svelte}\"",
     "lint:package": "publint --strict",
     "format": "prettier --write \"{tests/app/src,src}/**/*.{js,ts,json,svelte}\"",

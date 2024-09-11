@@ -2783,9 +2783,9 @@
     file-system-cache "2.3.0"
 
 "@storybook/types@^8.0.0":
-  version "8.2.9"
-  resolved "https://registry.yarnpkg.com/@storybook/types/-/types-8.2.9.tgz#30dceb9fbb512484b9273463bc46bdf99cecdc1e"
-  integrity sha512-FlrnZiI9lzvfA2k+VHxZ5P9JHXIbNUKIV6/469FwKlPiMhZrt9094O1lSKOfGo409mwBKDBm5X0hThbNc9ZnoQ==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@storybook/types/-/types-8.3.0.tgz#bcce2f238bfb80f4f05bc5cf19d70863375a9f43"
+  integrity sha512-2lF3pac9ktjUD85uPQBAxfNwbch4Vr56HB1Vnq7mLDIkV+OiLn9jEZ4Oabpq/y8jWYmGY5giRru0dIlZ+iPQuQ==
 
 "@sveltejs/package@^2.2.4":
   version "2.3.4"
