@@ -5,6 +5,8 @@ export interface AccordionItemProps extends HTMLAttributes<HTMLDivElement> {
   active?: boolean;
   class?: string;
   header?: string;
+  extraPrefix?: {};
+  extraSuffix?: {};
 }
 
 export interface AccordionItemEvents {
@@ -18,8 +20,6 @@ export interface AccordionItemEvents {
 export interface AccordionItemSlots {
   default: {};
   header?: {};
-  extraPrefix?: {};
-  extraSuffix ?: {};
 }
 
 export default class AccordionItem extends SvelteComponent<
